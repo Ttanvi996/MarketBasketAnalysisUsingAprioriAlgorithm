@@ -1,96 +1,67 @@
 Market Basket Analysis in Python Using the Apriori Algorithm
 
-This project performs Market Basket Analysis (MBA) using the Apriori algorithm to uncover association rules between items frequently purchased together.
-It uses Python along with the apyori library to generate frequent itemsets and meaningful rules.
+This project performs Market Basket Analysis using the Apriori algorithm to identify item associations within transaction data. The goal is to uncover frequently purchased item combinations and generate association rules that can support business decisions such as product placement, bundling, and cross-selling.
 
-Project Overview
+Objectives
 
-Market Basket Analysis helps businesses understand customer purchasing behavior by identifying patterns such as:
+Load and preprocess transaction data.
 
-Items frequently bought together
+Apply the Apriori algorithm to identify frequent itemsets.
 
-Strong product associations
+Generate association rules with support, confidence, and lift.
 
-Insights for promotions, store layout, cross-selling, and bundling
-
-In this project, we:
-
-Load transaction data from Market.csv
-
-Prepare data into list-of-lists format
-
-Apply Apriori Algorithm using the apyori package
-
-Extract association rules (support, confidence, lift)
-
-Interpret results for actionable insights
-
-Requirements
-
-Install required dependencies:
-
-pip install apyori pandas numpy
+Interpret discovered patterns for actionable insights.
 
 Dataset
 
-Market.csv contains transaction records, where each row represents a customer transaction and each column represents an item purchased.
+The project uses a CSV file (Market.csv) containing market transactions. Each row represents a single transaction, with each column containing one item purchased in that transaction. Missing values represent no additional items.
 
-1. Import Libraries
-import pandas as pd
-import numpy as np
-from apyori import apriori
+Requirements
 
-2. Load Data
-data = pd.read_csv('Market.csv', header=None)
+Install the necessary Python libraries:
 
-3. Transform to Transactions
-transactions = []
-for i in range(0, data.shape[0]):
-    transactions.append(data.iloc[i].dropna().tolist())
+pip install apyori pandas numpy
 
-4. Apply Apriori Algorithm
-rules = apriori(
-    transactions,
-    min_support=0.003,
-    min_confidence=0.2,
-    min_lift=3,
-    min_length=2
-)
-results = list(rules)
+Methodology
 
-5. Display Rules
+Import required libraries.
 
-Each rule gives:
+Load the dataset using pandas.
 
-Base itemset
+Convert the transactional data into a list-of-lists format.
 
-Associated itemset
+Run the Apriori algorithm with specified thresholds for support, confidence, and lift.
 
-Support
+Extract and display association rules.
 
-Confidence
+Key Code Components
 
-Lift
+Data loading: pd.read_csv('Market.csv', header=None)
 
-Example Output Interpretation
+Data transformation: converting rows into transaction lists.
 
-If a rule states:
+Apriori execution: apriori(transactions, min_support, min_confidence, min_lift)
 
-{Milk} → {Bread}, confidence = 0.35, lift = 4.2
+Rule interpretation: converting results into readable form.
 
-This means:
+Output
 
-When customers buy Milk, they also buy Bread 35% of the time.
+The output includes:
 
-The lift of 4.2 indicates a strong positive association.
+Frequent itemsets
 
-Use Cases
+Association rules
 
-Grocery stores → product placement
+Metrics such as support, confidence, and lift
 
-E-commerce → personalized recommendations
+These outputs help identify which products tend to be purchased together and how strong those relationships are.
 
-Marketing → promotion bundling
+Applications
 
-Retail analytics → optimized inventory management
+Retail product placement
 
+Recommendation systems
+
+Promotion and bundling strategies
+
+Inventory planning
