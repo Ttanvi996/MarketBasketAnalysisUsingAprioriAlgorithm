@@ -40,7 +40,7 @@ You will also need:
 
 ## How to Implement and Execute
 
-Follow these steps to run the project successfully:
+Follow these steps:
 
 ### 1. Clone or download the project files
 
@@ -104,7 +104,7 @@ After executing Apriori, the rules are converted into a readable format to view 
 
 ---
 
-## Output Description
+## Output
 
 The project generates:
 
