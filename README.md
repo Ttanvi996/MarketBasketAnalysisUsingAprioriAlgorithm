@@ -1,7 +1,3 @@
-Here is an expanded version — still clean, professional, and separated by sections with lines. No diagrams, no fancy formatting.
-
----
-
 ## Project Title
 
 Market Basket Analysis in Python Using the Apriori Algorithm
@@ -10,7 +6,7 @@ Market Basket Analysis in Python Using the Apriori Algorithm
 
 ## Description
 
-This project demonstrates how to perform Market Basket Analysis using Python. It applies the Apriori algorithm to identify frequently purchased item combinations and generate association rules. The analysis helps understand customer buying behavior and supports business decisions such as product bundling, placement, and targeted marketing.
+This project uses Apriori algorithm to identify frequently purchased item combinations and generate association rules. The analysis helps understand customer buying behavior and supports business decisions such as product bundling, placement, and targeted marketing.
 
 ---
 
@@ -27,11 +23,7 @@ The dataset (`Market.csv`) contains multiple market transactions.
 
 ## Requirements
 
-Install the required Python packages before running the notebook:
-
-```
-pip install apyori pandas numpy
-```
+Install the required Python packages before running the notebook: pip install apyori pandas numpy
 
 ---
 
@@ -86,16 +78,4 @@ The analysis produces:
 * Optimized promotions and discount bundles
 * Inventory planning and forecasting
 
----
 
-## Notes
-
-This project is designed for students, analysts, and beginners exploring data mining concepts. It provides a simple and clear implementation of the Apriori algorithm using the `apyori` library.
-
----
-
-If you want, I can also create:
-
-* A more technical README
-* A very short GitHub-optimized README
-* A project summary you can add to your resume
